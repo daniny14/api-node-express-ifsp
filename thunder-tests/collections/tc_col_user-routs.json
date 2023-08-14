@@ -1,0 +1,23 @@
+{
+    "_id": "859faf85-728d-4306-bd3e-2a503a67e5be",
+    "colName": "user routs",
+    "created": "2023-08-14T20:42:46.590Z",
+    "sortNum": 10000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fb2623cc-6b0e-4e1c-816e-e3794386c89e",
+            "colId": "859faf85-728d-4306-bd3e-2a503a67e5be",
+            "containerId": "",
+            "name": "/user get",
+            "url": "https://api-node-express-ifsp.onrender.com/user",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-14T20:42:46.595Z",
+            "modified": "2023-08-14T20:42:46.595Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
