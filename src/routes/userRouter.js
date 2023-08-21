@@ -1,21 +1,16 @@
 import express, { Router } from 'express';
-
+import getUser from '../controllers/user/getUser.js';
+import postUser from '../controllers/user/postUser.js';
+import putUser from '../controllers/user/putUser.js';
+import deleteUser from '../controllers/user/deleteUser.js';
 const router = express.Router();
 
-router.get('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api get"})
-})
+router.get('/', getUser)
 
-router.post('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api metodo post"})
-})
+router.post('/', postUser)
 
-router.put('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api metodo put"})
-})
+router.put('/', putUser)
 
-router.delete('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api metodo delete"})
-})
+router.delete('/', deleteUser)
 
 export default router
