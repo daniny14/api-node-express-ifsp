@@ -1,14 +1,17 @@
 import user from "../../models/userModel.js"
 
-const deleteUser = async(req, res) => {
+const updateUser = async (req, res) => {
     try{
         const userData = req.body
-        const [result] = await user.remove(userData.id)
+        const [result] = await user.update(userData)
         if(result.affectedRows === 1){
             res.json({
-                success: "Usuário Apagado com Sucesso!",
+                success: "Usuário atualizado com Sucesso!",
+                user: {
+                    ...userData
+                }
             })
-        }else{
+        } else {
             res.status(404).json({
                 error: `Usuário id: ${userData.id} não Encontrado!`
             })
@@ -21,4 +24,4 @@ const deleteUser = async(req, res) => {
     }
 }
 
-export default deleteUser
+export default updateUser

@@ -7,17 +7,7 @@ api.get('/',(req, res) => {
     res.json({message: "bem vindo a nossa api"})
 })
 
-api.post('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api metodo post"})
-})
-
-api.put('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api metodo put"})
-})
-
-api.delete('/',(req, res) => {
-    res.json({message: "bem vindo a nossa api metodo delete"})
-})
+api.use('/user',userRouter)
 
 //product
 api.get('/product',(req, res) => {
