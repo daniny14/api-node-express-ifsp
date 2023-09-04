@@ -1,6 +1,6 @@
 import express from 'express'
 import userRouter from "./routes/userRouter.js"
-
+import {PORT} from './config.js'
 const api = express()
 //cria rota get na raiz
 api.get('/',(req, res) => {
@@ -40,6 +40,6 @@ api.delete('/product',(req, res) => {
 api.use('/user', userRouter)
 
 //inicializa server
-api.listen(3000, () => {
-    console.log('server rodando na porta 3000. http://localhost:3000')
+api.listen(PORT, () => {
+    console.log(`server rodando na porta ${PORT}. http://localhost:${PORT}`)
 })
